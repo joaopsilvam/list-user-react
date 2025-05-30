@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["src"]
+}

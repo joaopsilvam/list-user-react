@@ -1,0 +1,66 @@
+.sidebar {
+  width: 15vw;
+  min-width: 180px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #fcbf49;
+  padding: 24px 16px;
+  box-shadow: 1px 0 8px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar .profile-pic {
+  width: 90px;
+  height: 90px;
+  margin-top: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 2px solid #fff;
+}
+
+.sidebar .username {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.sidebar .email {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: center;
+  word-break: break-word;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 15vw;
+}
+
+.sidebar nav ul li {
+  margin: 4px 0;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #000;
+}
+
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background-color: #ffd98e;
+}
+

@@ -1,0 +1,78 @@
+/* LoginPage.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f3f0e6;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #fcbf49;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background: #f4b400;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 16px;
+}
