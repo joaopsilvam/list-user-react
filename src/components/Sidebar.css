@@ -1,66 +1,129 @@
 .sidebar {
-  width: 15vw;
-  min-width: 180px;
+  width: 15%;
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   background-color: #fcbf49;
-  padding: 24px 16px;
+  padding: 32px 16px;
   box-shadow: 1px 0 8px rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.sidebar .profile-pic {
-  width: 90px;
-  height: 90px;
-  margin-top: 20px;
+/* avatar com sombra e borda */
+.profile-pic {
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  margin-bottom: 16px;
+  border: 3px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   object-fit: cover;
-  margin-bottom: 12px;
-  border: 2px solid #fff;
 }
 
-.sidebar .username {
+/* nome e email */
+.username {
   font-size: 16px;
-  font-weight: bold;
-  color: #000;
+  font-weight: 600;
+  color: #222;
   margin-bottom: 4px;
-  text-align: center;
 }
 
-.sidebar .email {
+.email {
   font-size: 13px;
-  color: #333;
+  color: #444;
   margin-bottom: 24px;
   text-align: center;
-  word-break: break-word;
 }
 
-.sidebar nav ul {
+/* menu de navegação */
+nav ul {
   list-style: none;
   padding: 0;
-  margin: 0;
-  width: 15vw;
-}
-
-.sidebar nav ul li {
-  margin: 4px 0;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 12px 0;
-  text-align: center;
+  margin-top: auto;
   width: 100%;
-  border-radius: 8px;
+}
+
+nav ul li {
+  padding: 12px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 8px;
   transition: background-color 0.2s ease, color 0.2s ease;
-  color: #000;
 }
 
-.sidebar nav ul li.active,
-.sidebar nav ul li:hover {
-  background-color: #ffd98e;
+nav ul li:hover,
+nav ul li.active {
+  background-color: #ffffff;
+  color: #fcbf49;
+  font-weight: bold;
 }
 
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    width: 100vw;
+    background-color: #fcbf49;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 8px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .profile-pic,
+  .username,
+  .email {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  nav ul li {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+    transition: background-color 0.2s ease;
+    border-radius: 0;
+  }
+
+  nav ul li.active,
+  nav ul li:hover {
+    background-color: rgb(255, 255, 255);
+    color: #fcbf49;
+    border-radius: 5px;
+  }
+}
